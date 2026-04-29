@@ -69,6 +69,62 @@ Unit tests have been implemented to verify:
 
 ---
 
+
+# 🥈 Level 2 - Abstract Factory Pattern
+
+## 📌 Description
+
+In this level, the **Abstract Factory design pattern** is implemented to create families of related objects without specifying their concrete classes.
+
+The exercise consists of building a contact management system capable of formatting **addresses** and **phone numbers** depending on the selected country.
+
+---
+
+## ⚙️ Functionality
+
+The system allows:
+
+- Creating addresses formatted according to the country
+- Creating phone numbers with the correct international prefix and format
+- Switching between countries without modifying client code
+
+---
+
+## 🧠 Design
+
+The following elements have been implemented:
+
+- **Abstract Products**:
+  - `Address`
+  - `Phone`
+
+- **Abstract Factory**:
+  - `ContactFactory`
+
+- **Concrete Factories**:
+  - `SpainContactFactory`
+  - `USAContactFactory`
+
+- **Concrete Products**:
+  - `SpainAddress` / `USAddress`
+  - `SpainPhone` / `USPhone`
+
+- **Encapsulation & Validation**:
+  - Each class is responsible for its own formatting logic
+  - Input validation is handled in constructors (null, blank, length checks)
+
+---
+
+## 🧪 Tests
+
+Unit tests verify:
+
+- Correct formatting of addresses and phone numbers for each country
+- Behavior changes when switching factories (Spain vs USA)
+- Proper exception handling for invalid inputs (null, blank, incorrect length)
+
+---
+
 # 🚀 Technologies Used
 
 - Java
