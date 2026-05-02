@@ -125,6 +125,60 @@ Unit tests verify:
 
 ---
 
+
+# 🥉 Level 3 - Strategy Pattern
+
+## 📌 Description
+
+In this level, the **Strategy design pattern** is implemented to allow changing the behavior of an algorithm at runtime.
+
+The exercise consists of building a flexible report generation system capable of producing reports in multiple formats without modifying the main logic.
+
+---
+
+## ⚙️ Functionality
+
+The system allows:
+
+- Generating reports in different formats (JSON, CSV, PDF, HTML, XML, Excel, Word)
+- Switching report formats dynamically at runtime
+- Avoiding conditional logic such as `if` or `switch`
+
+---
+
+## 🧠 Design
+
+The following elements have been implemented:
+
+- **Strategy Interface**:
+  - `ReportStrategy`
+
+- **Concrete Strategies**:
+  - `JsonStrategy`
+  - `CsvStrategy`
+  - `PdfStrategy`
+  - `HtmlStrategy`
+  - `XmlStrategy`
+  - `ExcelStrategy`
+  - `WordStrategy`
+
+- **Context**:
+  - `ReportService`
+    - Receives a strategy via constructor
+    - Executes the selected strategy without knowing its implementation
+
+---
+
+## 🧪 Tests
+
+Unit tests verify:
+
+- That each strategy returns the correct report format
+- That behavior changes correctly when switching strategies
+- That the `ReportService` works independently of the concrete implementation
+
+---
+
 # 🚀 Technologies Used
 
 - Java
